@@ -1,0 +1,44 @@
+$primaryColor : red;
+.detailStyling{display: flex;
+  gap: 10px;
+  align-items: center;}
+
+body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  width: 75vw;
+  border: 1px solid black;
+  color: $primaryColor;
+}
+p,h2{
+  margin: 0;
+}
+.overall-details{
+  @extend .detailStyling;
+  
+}
+#details{
+  display: flex;
+  justify-content: space-around;
+}
+
+#attendance-circle{
+  font-size: 50px;
+}
+
+#subject-card{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px 10px rgb(200, 200, 200);
+  #subject-attendance{
+    @extend .detailStyling;
+  }
+}
