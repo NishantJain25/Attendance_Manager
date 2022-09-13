@@ -1,4 +1,4 @@
-$primaryColor : red;
+$primaryColor : black;
 .detailStyling{display: flex;
   gap: 10px;
   align-items: center;}
@@ -12,7 +12,6 @@ body{
 
 .App {
   width: 75vw;
-  border: 1px solid black;
   color: $primaryColor;
 }
 p,h2{
@@ -25,20 +24,74 @@ p,h2{
 #details{
   display: flex;
   justify-content: space-around;
+  margin-bottom: 50px;
+  transition: 0.3s all;
 }
 
 #attendance-circle{
   font-size: 50px;
 }
 
+#container{
+  display: flex;
+  flex-direction: column;
+  
+}
 #subject-card{
   display: flex;
   justify-content: space-between;
-  margin: 20px 0px;
+  width: 50vw;
+  margin: 10px auto;
   padding: 10px 20px;
   border-radius: 20px;
   box-shadow: 5px 5px 10px 10px rgb(200, 200, 200);
   #subject-attendance{
     @extend .detailStyling;
+    transition: 0.5s all;
+  }
+}
+
+#new-subject{
+  width: fit-content;
+  transition: 0.3s all;
+  margin: 10px auto;
+  padding: 20px;
+  flex-direction: column;
+  background-color: aquamarine;
+  border-radius: 20px;
+  div{
+    margin: 10px 0px;
+  }
+  label{
+    text-align: left;
+  }
+  input{
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+  #subject-goal, #subject-initial-attended, #subject-initial-total{
+    width: 50px;
+  }
+  #form-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  button{
+    width: 120px;
+    height: 40px;
+    margin: 10px 0px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  #submit{
+    background-color: chartreuse;
+  }
+  #cancel{
+    background-color: black;
+    color: white;
   }
 }
